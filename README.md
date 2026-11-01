@@ -74,7 +74,7 @@ This project exposes a **Books CRUD REST API** built with **Node.js + Express.js
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/252U1R9115/BDF_Lab_02.git
+git clone https://github.com/abhi2-cloud/BDF-Lab-02.git
 cd BDF_Lab_02
 npm install
 ```
@@ -339,24 +339,72 @@ SQL injection is an attack where malicious SQL code is embedded in user input (e
 
 ### GitHub Repository
 
+**Repository URL:** https://github.com/abhi2-cloud/BDF-Lab-02
+
+```bash
+git clone https://github.com/abhi2-cloud/BDF-Lab-02.git
+cd BDF-Lab-02
+npm install
+npm start
 ```
-https://github.com/252U1R9115/BDF_Lab_02
+
+---
+
+## Live Deployment on Render
+
+The application is successfully deployed on **Render** as a free Web Service.
+
+### 🌐 Live Application URL
+
+```
+https://bdf-lab-02-dscw.onrender.com
 ```
 
-*(Repository link will be updated after explicit approval to push.)*
+### Render Deployment Configuration
 
-### Live Deployment
+| Field | Value |
+|-------|-------|
+| **Platform** | Render Free Web Service |
+| **Build Command** | `npm install` |
+| **Start Command** | `npm start` |
+| **Branch** | `main` |
+| **Repository** | https://github.com/abhi2-cloud/BDF-Lab-02 |
 
-The application is prepared for deployment on **Render** using:
+### Testing the Live API
 
-- **Build command:** `npm install`
-- **Start command:** `npm start`
-- **PORT:** Automatically reads `process.env.PORT` (falls back to 3000 locally)
+Open the following URLs directly in a browser to test the GET endpoints:
 
-> ⚠️ **Important – Render SQLite Persistence Notice:**  
-> Render's free tier uses **ephemeral storage**. This means the `books.db` file will reset to its initial committed state every time the instance restarts or is replaced. SQLite is suitable for development and demos; for production persistence, use a managed database (e.g., PostgreSQL via Render's free tier, Neon, or Supabase).
+| Endpoint | Live URL |
+|----------|----------|
+| Get All Books | https://bdf-lab-02-dscw.onrender.com/books |
+| Get Book by ID (ID = 1) | https://bdf-lab-02-dscw.onrender.com/books/1 |
 
-*(Live URL will be added after deployment is explicitly approved.)*
+For POST, PUT, and DELETE operations, use **Postman** with the base URL:
+```
+https://bdf-lab-02-dscw.onrender.com
+```
+
+### ⏱️ Render Free Tier – Sleep Warning
+
+Render's free Web Service **automatically goes to sleep after approximately 15 minutes of inactivity**.
+
+- The **first request after a sleep period may take 30–60 seconds** to respond while the instance wakes up.
+- Subsequent requests will respond at normal speed.
+- This is expected behaviour on the free plan and does not indicate an error.
+
+### ⚠️ SQLite Data Persistence Warning
+
+Render's free tier uses **ephemeral (temporary) disk storage**. This has the following implications:
+
+| Action | Effect on `books.db` |
+|--------|---------------------|
+| Instance restart or sleep/wake | Data written at runtime **may be lost** |
+| New deployment (code push) | `books.db` **resets** to the committed version (10 seed records) |
+| POST / PUT / DELETE via live URL | Changes work for the current session only |
+
+The 10 pre-seeded book records committed to the repository will always be present after a fresh deploy or restart.
+
+> For production-level persistence, use a managed database such as **PostgreSQL** (available on Render's free tier), **Neon**, or **Supabase**. SQLite is appropriate for this college lab demonstration.
 
 ---
 
