@@ -4,6 +4,21 @@
 
 ---
 
+## 🚀 Live Deployment on Render
+
+| | |
+|---|---|
+| **Live URL** | https://bdf-lab-02-dscw.onrender.com |
+| **GitHub** | https://github.com/abhi2-cloud/BDF-Lab-02 |
+
+**Quick test — open these in your browser:**
+- 📚 Get all books → https://bdf-lab-02-dscw.onrender.com/books
+- 🔍 Get book by ID → https://bdf-lab-02-dscw.onrender.com/books/1
+
+> ⏱️ **First request may take 30–60 seconds** — Render's free tier sleeps after 15 minutes of inactivity. Subsequent requests are fast.
+
+---
+
 ## Project Information
 
 | Field               | Details                                   |
@@ -103,11 +118,21 @@ The server starts at **http://localhost:3000/**
 
 ## API Documentation
 
-### Base URL
+### Base URLs
 
-```
-http://localhost:3000
-```
+| Environment | Base URL | When to use |
+|-------------|----------|-------------|
+| **Local Development** | `http://localhost:3000` | When running `npm start` or `npm run dev` on your machine |
+| **Live Production (Render)** | `https://bdf-lab-02-dscw.onrender.com` | After deployment — accessible from anywhere |
+
+#### Live GET Endpoint Links (click to test in browser)
+
+| Endpoint | Local URL | Live Render URL |
+|----------|-----------|----------------|
+| Get All Books | http://localhost:3000/books/ | https://bdf-lab-02-dscw.onrender.com/books |
+| Get Book by ID (ID = 1) | http://localhost:3000/books/1/ | https://bdf-lab-02-dscw.onrender.com/books/1 |
+
+> For POST, PUT, and DELETE — use **Postman** and switch the base URL between local and Render as needed.
 
 ### Endpoints
 
