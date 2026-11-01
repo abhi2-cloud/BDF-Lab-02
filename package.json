@@ -1,0 +1,26 @@
+{
+  "name": "bdf-lab-02",
+  "version": "1.0.0",
+  "description": "BDF Lab 2 - SQLite Database and CRUD Routes | Student: PAMPANA ABHI VEERA DURGA LAKSHMAN | Reg: 252U1R9115 | Section: CSE GEN AI 2B",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sqlite",
+    "crud",
+    "rest-api"
+  ],
+  "author": "PAMPANA ABHI VEERA DURGA LAKSHMAN",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
